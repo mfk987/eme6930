@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+h1{
+    font-family: 'Zilla Slab', serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
 body{
-    background-image: url("images/floral.png");
-    background-repeat: repeat;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16;
 }
