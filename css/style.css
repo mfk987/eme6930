@@ -13,3 +13,11 @@ body{
     font-weight: 400;
     font-size: 16;
 }
+
+.title{
+    width: 50%;
+    float: center; 
+    border: 2px solid #BDD6AB;
+    padding: 10 px;
+}
+
