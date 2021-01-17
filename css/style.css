@@ -1,25 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 h1{
-    font-family: 'Zilla Slab', serif;
-    font-weight: 700;
-    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: #0F2063;
+    text-shadow: #e6e4d4 2px 2px;
 }
 
+h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #0F2063;
+    text-shadow: ##e6e4d4 2px 2px;
+
+}
 body{
-    background-image: url("../images/drops.png");
+    background-image: url("../images/floral.png");
     background-repeat: repeat;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 16;
 }
+p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+ol{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
 
+.site-content{
+    margin: auto;
+    width: 80%;
+}
 .title{
-    width: 50%;
     margin: auto; 
+    width: 100%;
     background-color: white;
-    border: 2px solid #BDD6AB;
-    padding: 10 px;
+    border: 6px solid #9e8954;
+    box-sizing: border-box;
     text-align: center;
 }
+
+.column-main{
+    float: left;
+    width: 70%;
+    margin-top: -6px;
+    min-height: 600px;
+    background-color: white;
+    border: 6px solid #9e8954;
+    border-right: 3px solid #9e8954;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.column{
+    float: left;
+    width: 30%;
+    margin-top: -6px;
+    min-height: 600px;
+    background-color: white;
+    border: 6px solid #9e8954;
+    border-left: 3px solid #9e8954;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 
