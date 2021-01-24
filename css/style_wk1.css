@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:ital,wght@0,300;0,400;0,800;1,300;1,400&display=swap');
+
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 64px;
+    color: #1B2952;
+    text-shadow: #e6e4d4 2px 2px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: #4C609E;
+
+}
+
+h5{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4C609E;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+body{
+    background-image: url("../images/floral.png");
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    padding: 10px;
+}
+
+/*Link Styling*/
+a:link{
+  color: #4c609e;
+}
+
+a:visited{
+  color: #4c609e;
+}
+
+a:hover{
+  color: #C7D15A;
+}
+
+.button {
+  border: white;
+  color:  white;
+  width: 100px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  text-align: justify;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  overflow: hidden;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {background-color: #1B2952;
+  border-radius: 5px;
+  box-shadow: gray 2px 2px;
+}
+.button1:hover {
+  background-color: #4C609E;
+}
+
+.button12 {background-color: #1B2952;
+  border-radius: 5px;
+  box-shadow: gray 2px 2px;
+}
+.button12:hover {
+  background-color: white;
+}
+
+li{
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    background: #9E9154;
+    box-shadow: #e6e4d4 2px 2px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+img{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: gray 1px 1px;
+    margin-right: 20px;
+}
+
+/*CSS modified from https://colintoh.com/blog/display-table-anti-hero using the "Holy Grail" layout*/
+.wrapper {
+    margin: 2% 10%;
+    height: 90%;
+    display: table;
+    width: 80%; /*setting the content to 90% height and 80% width to allow the background design to show*/
+    background: white;
+    border: 4px solid #9E9154;
+    border-collapse: collapse;
+  }
+  
+  .header {
+    display: table-row;
+    background: white;
+    text-align: center;
+    height: 60px;
+    border: 4px solid #9E9154;
+    border-collapse: collapse;
+  }
+  
+  .main {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .box {
+    display: table-cell;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    width: 30%;
+    padding: 20px;
+    border-left: 4px solid #9E9154; /*Only the left border is visible, otherwise there is overlap that is not being cleared by the "collapse" property*/
+  }
+  
+  .footer {
+    display: table-row;
+    height:20px;
+    background:white;
+    text-align: center;
+    border: 4px solid #9E9154;
+    border-collapse: collapse;
+  }

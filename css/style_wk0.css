@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: #0F2063;
+    text-shadow: #e6e4d4 2px 2px;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #0F2063;
+    text-shadow: ##e6e4d4 2px 2px;
+
+}
+
+h5{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0F2063;
+}
+body{
+    background-image: url("../images/floral.png");
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+ol{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.site-content{
+    margin: auto;
+    width: 80%;
+    padding-top: 20px;
+}
+.title{
+    margin: auto; 
+    width: 100%;
+    background-color: white;
+    border: 4px solid #9e8954;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.column-main{
+    float: left;
+    width: 70%;
+    margin-top: -4px;
+    min-height: 600px;
+    background-color: white;
+    border: 4px solid #9e8954;
+    border-right: 3px solid #9e8954;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.column{
+    float: left;
+    width: 30%;
+    margin-top: -4px;
+    min-height: 600px;
+    background-color: white;
+    border: 4px solid #9e8954;
+    border-left: 3px solid #9e8954;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .footer{
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      background-color: white;
+      border: 4px solid #9e8954;
+      border-top: 0px;
+      box-sizing: border-box;
+      padding: 5px;
+
+  }
+
+
