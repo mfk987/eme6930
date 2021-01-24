@@ -12,7 +12,7 @@ green accent: #C7D15A
 h1{
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: 64px;
+    font-size: 4em;
     color: #1B2952;
     text-shadow: #e6e4d4 2px 2px;
     margin-top: 8px;
@@ -22,7 +22,7 @@ h1{
 h2{
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 2em;
     color: #4C609E;
 
 }
@@ -30,7 +30,7 @@ h2{
 h5{
     font-family: 'Playfair Display', serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1em;
     color: #4C609E;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -45,7 +45,7 @@ body{
 p{
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1em;
     text-align: justify;
     padding: 10px;
 }
@@ -107,9 +107,9 @@ a:hover{
 }*/
 
 img{
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 5px; /*Adding in curved edges on frame*/
+    border: 4px solid white;
+    padding: 5px;
+    border-radius: 10px; /*Adding in curved edges on frame*/
     box-shadow: gray 1px 1px;
     margin-right: 20px;
 }
