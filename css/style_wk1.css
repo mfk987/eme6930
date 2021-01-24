@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:ital,wght@0,300;0,400;0,800;1,300;1,400&display=swap');
 
+/*Colors Used:
+
+dark blue: #1b2952
+light blue: #4c609e
+gold: #9E9154
+green accent: #C7D15A
+
+*/
 
 h1{
     font-family: 'Playfair Display', serif;
@@ -74,15 +82,17 @@ a:hover{
   cursor: pointer;
 }
 
-.button1 {background-color: #1B2952;
+.button1 {
+  background-color: #1B2952;
   border-radius: 5px;
   box-shadow: gray 2px 2px;
 }
+
 .button1:hover {
   background-color: #4C609E;
 }
 
-li{
+/*li{
     list-style-type: none;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -94,12 +104,12 @@ li{
     box-shadow: #e6e4d4 2px 2px;
     padding: 10px;
     margin-bottom: 5px;
-}
+}*/
 
 img{
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px; /*Adding in curved edges on frame*/
     box-shadow: gray 1px 1px;
     margin-right: 20px;
 }
