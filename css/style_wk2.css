@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:ital,wght@0,300;0,400;0,800;1,300;1,400&display=swap');
+
+/*Colors Used:
+
+dark blue: #1b2952
+light blue: #4c609e
+gold: #9E9154
+green accent: #C7D15A
+
+*/
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 3.25em;
+    color: #1B2952;
+    text-shadow: #e6e4d4 2px 2px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 2.5em;
+    color:  #1B2952;
+    margin-top: 0em;
+    margin-bottom: 0.25em;
+
+}
+
+h3{
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #4C609E;
+  margin-top: 0em;
+  margin-bottom: 0.1em;
+
+}
+
+h5{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #4C609E;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+body{
+    background-image: url("../images/floral.png");
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: justify;
+    padding: 10px;
+}
+
+.header, .footer {
+  background-color: white;
+  border: 6px solid #9e9154;
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+div {
+  background-color:#e6e4d4;
+  padding: 10px;
+  margin: auto;
+  width: 90%;
+  
+}
+
+/*Link Styling*/
+a:link{
+  color: #4c609e;
+}
+
+a:visited{
+  color: #4c609e;
+}
+
+a:hover{
+  color: #C7D15A;
+}
+
+.button {
+  border: white;
+  color:  white;
+  width: 100px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  text-align: justify;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  overflow: hidden;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #1B2952;
+  border-radius: 5px;
+  box-shadow: gray 2px 2px;
+}
+
+.button1:hover {
+  background-color: #4C609E;
+}
+
+/*li{
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    background: #9E9154;
+    box-shadow: #e6e4d4 2px 2px;
+    padding: 10px;
+    margin-bottom: 5px;
+}*/
+
+img{
+    /*border: 4px solid white;
+    padding: 5px;*/
+    margin-right: 20px;
+    float: right;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+  background-color: white;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
