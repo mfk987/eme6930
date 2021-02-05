@@ -18,6 +18,7 @@ red: #ed553b
 
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Slabo+13px&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
 
 h1{
     font-family: 'Slabo 13px', serif;
@@ -25,12 +26,21 @@ h1{
     color: white;
 }
 
-h3{
+h2{
     font-family: 'Slabo 13px', serif;
     font-size: 2em;
     margin-bottom: 0.5em;
 
 }
+
+h3 {
+
+    font-family: 'Grand Hotel', cursive;
+    font-size: 2em;
+    color: #20639b;
+    
+}
+
 
 p{
     font-family: 'Open Sans', sans-serif;
@@ -93,7 +103,7 @@ li a:hover:not(.active) {
 
 
 
-  /*Responsive Grid-View from https://www.w3schools.com/css/css_rwd_grid.asp
+  /*Responsive Grid-View from https://www.w3schools.com/css/css_rwd_grid.asp*/
 * {
     box-sizing: border-box;
   }
@@ -109,24 +119,108 @@ li a:hover:not(.active) {
     padding: 15px;
   }
   
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}*/
+  /*Padding so that the menus do not obscure any of the page content*/
+.content{
+    padding: 1.5em;
+    margin-top: 3.5em;
+    margin-bottom: 2em;
+}
+
+.callout {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+.small {
+    display: contents;
+}
+
+.big {
+    display: none;
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    
+  }
   
+  @media only screen and (min-width: 481px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
 
-  /**/
-
-  @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-      width: 100%;
+    .callout {
+        display: contents;
     }
+
+  }
+
+  @media only screen and (min-width: 991px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #173f5f;
+        position: fixed;
+        box-sizing: border-box;
+        top: 93px;
+        width: 100%;
+        height: 48px;
+      }
+
+    footer {
+        display: block;
+        background-color: #173f5f;
+        padding: 0.25em;
+        color: white;
+        text-align: center;
+    }
+
+    .content {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        margin-top: 12vh;
+    }
+
+    .callout {
+        display: contents;
+    }
+
+    .small {
+        display: none;
+    }
+    
+    .big {
+        display: contents;
+    }
+  }
