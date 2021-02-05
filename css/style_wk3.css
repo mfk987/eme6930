@@ -216,11 +216,4 @@ footer {
         display: contents;
     }
 
-    .small {
-        display: none;
-    }
-    
-    .big {
-        display: contents;
-    }
   }
