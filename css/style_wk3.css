@@ -71,6 +71,9 @@ img.game {
     box-shadow: gray 3px 3px;
 }
 
+img.hide {
+  display: none;
+}
 
 /*Bottom Fixed Navigation Bar from https://www.w3schools.com/css/css_navbar_horizontal.asp*/
 ul {
@@ -170,6 +173,11 @@ footer {
         display: contents;
     }
 
+    /*Image set to only appear on tablets*/
+    img.hide {
+      display: block;
+      box-shadow: gray 3px 3px;
+
   }
 
   @media only screen and (min-width: 1080px) {
@@ -226,4 +234,9 @@ footer {
         padding: 14px 16px;
         text-decoration: none;
     }
+
+    img.hide {
+      display:none;
+        }
+
   }
