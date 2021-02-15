@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:ital,wght@0,300;0,400;0,800;1,300;1,400&display=swap');
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 54px;
+    color: #1B2952;
+    text-align: center;
+    padding: 0.5em;
+    background-color: whitesmoke;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: #4C609E;
+
+}
+
+h5{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4C609E;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+    padding: 16px;
+    color: white;
+    text-align: center;
+}
+
+
+

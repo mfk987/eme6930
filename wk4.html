@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Week 4 - JavaScript</title>
+        <link rel="stylesheet" href="css/style_wk4.css">
+    </head>
+    <body>
+        <h1>Javascript Math Fun: Three Digits Become Six!</h1>  <!--Math Trick from https://www.thoughtco.com/math-tricks-that-will-blow-your-mind-4154742*/-->
+        <script type="text/JavaScript">
+            
+            /* Declaration of five variables for the math trick*/
+            var num_1, num_2, num_3, num_4, num_5;
+    
+                num_1 = Number(prompt("Enter a whole three-digit number:"));
+    
+                if(num_1 % 2 == 0) {
+                    window.alert("You entered an even number!");
+                    document.body.style.backgroundColor = "#316A55"  /*Changing the background color of the page is the number is even or odd*/
+                }
+
+                else {
+                    window.alert("You entered an odd number.");
+                    document.body.style.backgroundColor = "#286D98"  /*Changing the background color of the page is the number is even or odd*/
+                }
+
+                document.write("<p>You entered "+ num_1 +".</p>")
+
+                num_2 = num_1*7;
+                document.write("<p>Your number mulitpled by 7 equals " + num_2 + ".</p>");
+
+                num_3 = num_2*11;
+                document.write("<p>And that number multiplied by 11 equals " + num_3 + ".</p>");
+
+                num_4 = num_3*13;
+                document.write("<p>And that number multiplied by 13 equals " + num_4 + ".</p>");
+
+                num_5 = num_1 + "" +num_1; /*Concatenates the thre-digit number into a six-digit number to test the results.*/
+                
+                if (num_4 == num_5) { 
+                    document.write("<p>Congratulations! The math trick worked and you now have a six-digit number that repeats the three-digit number.</p>");
+		        }
+	            else { /*This message should never display, unless the user did not enter a three digit number as instructed.*/
+                    document.write("<p> Hmmm, that's strange. You should have gotten " + num_5 + " but you got " + num_4 + " instead. <br>Refresh the page and try another again.</p>");
+		        }
+            </script>
+    </body>
+
+
+</html>/
