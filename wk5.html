@@ -1,3 +1,145 @@
-<html>
-    
+<html> <!-- This is a html document -->
+ 
+<head>
+    <title>Week 5 - Forms</title>
+    <link rel="stylesheet" href="css/style_wk5b.css"> <!-- linking to the CSS for this page/form-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <form id="regForm" action=""><!--Creating a form-->
+      <h1>Awesome County Middle School Waitlist Registration Form</h1> <!-- Page Name and instructions -->
+        <p>Hello and thank you for your interest in our middle schools! Please complete all sections in this form to place your student on the waitlist for the middle school(s) of your choice. You must complete this form for each student you are entering on the waitlist.</p>
+        <p>If you experience technical difficulties, please contact the Awesome County School District's IT Help Desk at ###-###-####</p><br>
+        
+      <h2>Adult's Name & Contact Information:</h2> <!-- Adult's Information -->
+        <p><input placeholder="First Name." oninput="this.className = ''"></p> <!--This form mainly uses free-form text boxes for data entry-->
+        <p><input placeholder="Last Name." oninput="this.className = ''"></p>
+        <p><input placeholder="Physical Address." oninput="this.className = ''"></p>
+        <p><input placeholder="Mailing Address." oninput="this.className = ''"></p>
+        <p><input placeholder="E-mail Address." oninput="this.className = ''"></p>
+        <p><input placeholder="Phone Number." oninput="this.className = ''"></p>
+        <p><select id="commpref" name="commpref">
+          <option value="x">Preferred Communication Method [Pick One].</option> <!-- I feel like a lot of forms ask this question. A drop-down selection seemed the most efficient for a single answer question with pre-defined responses and I hope that this is acceptable in place of the waitlist dropdown-->
+          <option value="m">Mail</option>
+          <option value="e">E-mail</option>
+          <option value="p">Phone</option></select></p>
+        
+      <h2>Student's Name:</h2> <!-- Student's Information -->
+        <p><input placeholder="First Name." oninput="this.className = ''"></p>
+        <p><input placeholder="Last Name." oninput="this.className = ''"></p>
+        <p><input type="date" id="birthday" name="birthday"></p>
+        <p><select id="gender" name="gender">
+          <option value="x">Gender - Select One.</option> 
+          <option value="m">Male</option>
+          <option value="f">Female</option>
+          <option value="u">Other</option></select></p>
+        <p><select id="grade" name="grade">
+          <option value="x">Upcoming Grade - Select One.</option>
+          <option value="6">6th Grade</option>
+          <option value="7">7th Grade</option>
+          <option value="8">8th Grade</option></select></p>
+        <p><input placeholder="Academic Interests [List up to 3]" oninput="this.className = ''"></p>
+        
+      <h2>Prior School's Information:</h2>
+        <p><input placeholder="Prior School's Name." oninput="this.className = ''"></p>
+        <p><input placeholder="City, State or School District." oninput="this.className = ''"></p>
+        
+          
+      <h2>Middle School Information & Waitlist Choice:</h2>
+        <p>Select the checkbox below each school's name to join the waitlist.</p>
+        <div class="clearfix">
+          <div class="box">
+            <h3>Liberty Middle School</h3>
+            <input type="checkbox" id="school1" name="school1" value="Liberty Middle School"> <!-- Adding an option to join multiple waitlists using checkboxes rather than selecting only from a dropdown list. Not sure why they are ceneted in the div. -->
+            <!-- Button is example of requested functionality to hide/show more information about each school. -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            <input type ="button" onclick="myFunctiongetMore()" id="moreBtn" value="Read More">
+            </div>
+        
+          <div class="box">
+            <h3>Madison Middle School</h3>
+            <input type="checkbox" id="school2" name="school2" value="Madison Middle School">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots2">...</span><span id="more2">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            <input type ="button" onclick="myFunctiongetMore2()" id="moreBtn2" value="Read More">
+            </div>  
+        
+          <div class="box">
+            <h3>Jefferson Middle School</h3>
+            <input type="checkbox" id="school3" name="school3" value="Jefferson Middle School">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots3">...</span><span id="more3">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            <input type ="button" onclick="myFunctiongetMore3()" id="moreBtn3" value="Read More">
+            </div>
+        </div>
+      <h2>Other Information:</h2>
+      <p><input placeholder="Other Comments or Information." oninput="this.className = ''"></p>
+      <p>Please review all information to ensure before pressing the Submit button below!</p>
+      <div class="clearfix">
+        <div class="box2"><input type="Submit" onclick="myFunctionSubmit()"></div>
+        <div class="box2"><input type="Reset" onclick="myFunctionReset()"></div>
+      </div>         
+
+
+    <script>
+      /* From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_read_more -- had to update x3 for each button*/
+      function myFunctiongetMore() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("moreBtn");
+
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more"; 
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less"; 
+            moreText.style.display = "inline";
+          } }
+
+      function myFunctiongetMore2() {
+        var dots = document.getElementById("dots2");
+        var moreText = document.getElementById("more2");
+        var btnText = document.getElementById("moreBtn2");
+
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more"; 
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less"; 
+            moreText.style.display = "inline";
+          }  }
+
+      function myFunctiongetMore3() {
+        var dots = document.getElementById("dots3");
+        var moreText = document.getElementById("more3");
+        var btnText = document.getElementById("moreBtn3");
+
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more"; 
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less"; 
+            moreText.style.display = "inline";
+          }  }
+
+
+      function myFunctionSubmit() {
+        window.alert("Form Submitted! Please allow the School District one week to enter this information before calling for an update on your waitlist status."); /* Using an alert window after the "submit" button in clicked. */
+        document.getElementById("regForm").reset(); /* Then the form clears/resets */
+      }
+      
+      function myFunctionReset() {
+        document.getElementById("regForm").reset();
+          }
+
+    </script>
+    </form>
+  </body>
+
+
 </html>

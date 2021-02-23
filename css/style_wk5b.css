@@ -1,0 +1,134 @@
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: black;
+    margin-top: .01em;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.25em;
+    color:black;
+    text-shadow: ##e6e4d4 2px 2px;
+
+}
+
+h3{
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+
+}
+
+body{
+    background-image: url("../images/pencil.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: #e8e6e9;
+}
+
+
+/*Hello box model - adapted from W3 Schools; also used in Week 2*/
+* {
+  box-sizing: border-box;
+}
+
+/* Three column layout for three schools!*/
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* Two column layout for buttons at bottom of the page*/
+.box2 {
+  float: left;
+  width: 50%;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* Style the form */
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 80%;
+    min-width: 300px;
+  }
+  
+  /* Style the input fields */
+input, select, option {
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    border: 1px solid #aaaaaa;
+      }
+
+/* Focused Input from https://www.w3schools.com/css/css_form.asp*/
+input[type=text]:focus {
+    border: 3px solid #555;
+  }
+  
+/* Different Button Styles */  
+input[type=button] {
+  background-color: #2ba6df;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=reset] {
+  background-color: #dd1515;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hidden text */
+#more, #more2, #more3 {
+  display: none;
+}
