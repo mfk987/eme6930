@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS Constructors</title>
+        <link rel="stylesheet" href="css/style_wk7.css"> <!-- linking to the CSS for this page/form-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <meta charset="utf-8">    
+    
+        <script>
+
+            /* An array an var to keep track of orders entered */
+            var orders = new Array();
+            var num_orders = 0;
+
+            /* Constructor and prototype for a flower arrangement  */
+            function arrangement (flower1, flower2, filler, design, size, presentation) {
+                this.flower1 = flower1; // long-stem roses, sweetheart roses, carniations, daisys, seasonal
+                this.flower2 = flower2; // stargazer lilies, asiatic lilies, orchids, tulips, peonies, seasonal
+                this.filler = filler; // baby's breath, heather, leatherleaf fern, designer's choice 
+                this.design = design; // traditional, monochromatic, avant garde, designer's choice
+                this.size = size; // S, M, L, XL
+                this.presentation = presentation; // vase arrangement, hand-tied bouquet
+
+                /* Easy to read sentence of flower arrangement order */
+                this.neworder = function () {
+                    var orderStr = "Your order is for a " + this.size + " " + this.design + " " + this.presentation + " with " + this.flower1 + ", " + this.flower2 + " and " + this.filler + "."; 
+                    writeText (orderStr, "textArea");}
+
+                /* Function to determine order price based on inputs */    
+                this.orderprice = function () {
+                    var priceStr = "Your total is $"; 
+                                 
+                    if (this.size == "small") {
+
+                        if (this.presentation == "hand-tied bouquet")
+                            { priceStr = priceStr + "39.95";} 
+                            else {priceStr = priceStr + "46.85"} // small vase arrangement 
+                   
+                    } else if (this.size == "medium") {
+
+                        if (this.presentation == "hand-tied bouquet")
+                            { priceStr = priceStr + "49.95";}
+                            else {priceStr = priceStr + "56.85"} // medium vase arrangement 
+
+                    } else if (this.size == "large") {
+                        if (this.presentation == "hand-tied bouquet")
+                            { priceStr = priceStr + "59.95";}
+                            else {priceStr = priceStr + "66.85"} // large vase arrangement
+                    
+                    } else if (this.size == "extra-large") {
+                        if (this.presentation == "hand-tied bouquet")
+                            { priceStr = priceStr + "69.95";}
+                            else {priceStr = priceStr + "76.85"} // xl vase arrangement 
+                    }
+
+                    writeText(priceStr, "OrderPrice");
+                }
+                }
+
+
+            function custom_order () { //allows for unqiue inputs based on drop-down menus on the page
+                
+                var orderStr;
+                var priceStr;
+
+                // this part pulls the selections from the online form into the arragement constructor
+                orders[num_orders] = new arrangement (document.frm.flower1.value, document.frm.flower2.value, document.frm.filler.value, document.frm.design.value, document.frm.size.value, document.frm.presentation.value);
+                // and then writes out the new order text
+                orders[num_orders].neworder();
+                orders[num_orders].orderprice();
+                ++num_orders;
+            
+            }
+            /* Write out the order */
+            function writeText(txt, destination){
+                document.getElementById(destination).innerHTML=txt;
+            }
+            
+            /* Example Arrangements */
+            var arrangement1 = new arrangement("long-stem roses", "orchids", "leatherleaf fern", "traditional", "large", "vase arrangement");
+            var arrangement2 = new arrangement("daisies","tulips", "heather", "designer's choice", "medium", "hand-tied bouquet");
+
+
+
+        </script>
+    
+    </head>
+
+    <body>   
+    <form name = "frm">
+        <h1>The Online Flower Shop</h1>
+        <h3>Hello and welcome to our online order form!</h3>
+        <p>Please select one item from each list to create your custom flower arrangement. Want something seasonal or a surprise - then choose the "designer's choice" option. Arrangement prices are based on size and presentation.</p>
+        <h2>Custom Arrangment Builder:</h2>
+        <table>
+        
+        <tr>
+            <td><h3>Flower Choice 1</td>
+            <td><h3>Flower Choice 2</td>
+            <td><h3>Filler Flower</td>
+            <td><h3>Design</td>
+            <td><h3>Size</td>
+            <td><h3>Presentation</td>
+        </tr>
+
+        <tr>
+            <td>
+                <select name = "flower1"> 
+                    <option value = "long-stem roses">long-stem roses</option> <!-- inputs for arrangement -->
+                    <option value = "sweetheart roses">sweetheart roses</option>
+                    <option value = "dasies">dasies</option>
+                    <option value = "carnations">carnations</option>
+                    <option value = "designer's choice flower">designer's choice</option>
+                </select>
+            </td>
+
+            <td>
+                <select name = "flower2"> 
+                    <option value = "stargazer lilies">stargazer lilies</option> <!-- inputs for arrangement -->
+                    <option value = "asiatic lilies">asiatic lilies</option>
+                    <option value = "orchids">orchids</option>
+                    <option value = "peonies">peonies</option>
+                    <option value = "designer's choice flower">designer's choice filler</option>
+                </select>
+            </td>
+
+            <td>
+                <select name = "filler">
+                    <option value = "baby's breath">baby's breath</option> <!-- inputs for arrangement -->
+                    <option value = "heather">heather</option>
+                    <option value = "leatherleaf fern">leatherleaf fern</option>
+                    <option value = "designer's choice filler">designer's choice</option>
+                </select>
+            </td>
+
+            <td>
+                <select name = "design">
+                    <option value = "traditional"> traditional </option> <!-- inputs for arrangement -->
+                    <option value = "monochromatic"> monochromatic</option>
+                    <option value = "avant garde"> avant garde</option>
+                    <option value = "designer's choice"> designer's choice</option>
+                </select>
+            </td>
+
+            <td>
+                <select name = "size">
+                    <option value = "small"> small </option> <!-- inputs for arrangement -->
+                    <option value = "medium"> medium </option>
+                    <option value = "large"> large </option>
+                    <option value = "extra-large"> extra-large </option>
+                </select>
+            </td>
+
+            <td>
+                <select name = "presentation">
+                    <option value = "vase arrangement"> vase arrangement </option> <!-- inputs for arrangement -->             
+                    <option value = "hand-tied bouquet"> hand-tied bouquet</option>
+                </select>
+            </td>
+        </tr>
+    </table><br>
+
+
+            <input type="button" value = "Your Custom Arrangement" onclick= "custom_order();" name="textArea">
+            <br><br>
+            <h2>Not sure what to pick? Try one of our most popular arrangements:</h2>
+            <input type="button" value= "Popular Arrangement 1: $56.85" onclick = "arrangement1.neworder();" name="write arrangement1"> <!-- Not sure how to get this to write the order amount -->
+            <input type="button" value= "Popular Arrangement 2: $49.95" onclick = "arrangement2.neworder();" name="write arrangement2">
+            <br><br>
+            <h2>Arrangement Summary: </h2><p id="textArea"></p>
+            <h2>Arrangement Price: </h2><p id="OrderPrice"></p>
+                              
+        </form>     
+
+           
+
+    </body>
+
+</html>
