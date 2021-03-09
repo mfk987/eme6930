@@ -66,7 +66,7 @@
                 orders[num_orders] = new arrangement (document.frm.flower1.value, document.frm.flower2.value, document.frm.filler.value, document.frm.design.value, document.frm.size.value, document.frm.presentation.value);
                 // and then writes out the new order text
                 orders[num_orders].neworder();
-                orders[num_orders].orderprice();
+                orders[num_orders].orderprice(); // and outputs the order price based on size/presentation
                 ++num_orders;
             
             }
@@ -78,8 +78,6 @@
             /* Example Arrangements */
             var arrangement1 = new arrangement("long-stem roses", "orchids", "leatherleaf fern", "traditional", "large", "vase arrangement");
             var arrangement2 = new arrangement("daisies","tulips", "heather", "designer's choice", "medium", "hand-tied bouquet");
-
-
 
         </script>
     
@@ -161,18 +159,15 @@
 
 
             <input type="button" value = "Your Custom Arrangement" onclick= "custom_order();" name="textArea">
-            <br><br>
-            <h2>Not sure what to pick? Try one of our most popular arrangements:</h2>
-            <input type="button" value= "Popular Arrangement 1: $56.85" onclick = "arrangement1.neworder();" name="write arrangement1"> <!-- Not sure how to get this to write the order amount -->
+            <br>
+            <h2 style=>Custom Arrangement Summary: </h2><p id="textArea"></p>
+            <h2>Custom Arrangement Price: </h2><p id="OrderPrice"></p>
+            <h3>Not sure what to pick? Try one of our most popular arrangements:</h3>
+            <input type="button" value= "Popular Arrangement 1: $56.85" onclick = "arrangement1.neworder();" onclick = "arrangement1.orderprice();"> <!-- Not sure how to get this to write the order amount -->
             <input type="button" value= "Popular Arrangement 2: $49.95" onclick = "arrangement2.neworder();" name="write arrangement2">
-            <br><br>
-            <h2>Arrangement Summary: </h2><p id="textArea"></p>
-            <h2>Arrangement Price: </h2><p id="OrderPrice"></p>
+            
                               
         </form>     
-
-           
-
     </body>
 
 </html>
