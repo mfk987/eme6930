@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <script type = "text/javascript">
+    
+/*Add three arrays to add and show each group student names*/
+    var group1 = ["Benjamin", "Diana", "Erin", "Aaron"];
+    var group2 = ["Bruce", "Constance", "Anita", "Maryam", "Natlie"];
+    var group3 = ["Vince", "Ava"];
+
+
+/* Art group*/
+function showtopic1(){
+    document.getElementById("demo1").innerHTML = "Students in Game 1: " + group1;
+} 
+
+function addgroup1() {
+    if (group1 < [6]) {
+        prompt("The group is full. Choose another group.")
+    } else {
+        group1.push(prompt("Enter your name to join the Game 1 Group"));
+    showtopic1();
+    } }
+
+
+/* Math group*/
+function showtopic2(){
+    document.getElementById("demo2").innerHTML = "Students in Game 2: " + group2;
+}
+
+function addgroup2() {
+    group2.push(prompt("Enter your name to the Game 2 Group"));
+    showtopic2();
+}
+
+
+/* Sports group*/
+function showtopic3(){
+    document.getElementById("demo3").innerHTML = "Students in Game 3: " + group3;
+}
+
+function addgroup3() {
+    group3.push(prompt("Enter your name to join the Game 3 Group"));
+    showtopic3();
+}
+    </script>
+</head>
+
+<body>
+    <h1>Choose your favorite topic for next week class! </h1>
+    
+    <div class="button">
+        <p><button type="button" onclick="addgroup1()">Art group</button>
+        </p><p id="demo1"></p>
+        
+        <p><button type="button" onclick="addgroup2()">Math group</button></p>
+        <p id="demo2"></p>
+        
+        <button type="button" onclick="addgroup3()">Sports group</button>
+         <p id="demo3"></p>
+      
+    </div>
+</body>
+
+
+</html>
