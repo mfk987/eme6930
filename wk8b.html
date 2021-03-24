@@ -1,0 +1,63 @@
+<html lang="en">
+
+    <head>
+        <title>Week 8 - Arrays</title>
+        <link rel="stylesheet" href="css/style_wk8.css"> <!-- linking to the CSS for this page/form-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      </head>
+
+<body>
+    <h1>Grade Point Average Calculator</h1>
+    
+    <script type = "text/javascript">
+    
+        /* Setting up the number of classes in the Schedule*/
+            var numclasses = Number(prompt("Enter your number of classes this semester"));
+            
+            document.write("<p>You are taking " + numclasses + " classes this semester.</p>")
+    
+        /* Prompt the user to enter a name for i number of classes - specified above*/
+            var className = [];
+                for (i = 0; i < numclasses; i++ ) {
+    
+                    className[i] = prompt("Enter the class name for Class " + [i+1]);
+                };
+
+                /* Write out the class names*/
+                document.write("<p>The class names are " + className + " .</p>")
+        
+        /* Prompt the user to enter a grade for each class specified above*/
+            var grades = [];
+                for (i = 0; i < className.length; i++ ) {
+    
+                    grades[i] = Number(prompt("Enter your numeric grade for " + className[i]));
+                };
+                
+                /* Write out the grades names*/
+                document.write("<p>Your grades are " + grades + " .</p>")
+            
+                /* Calculate your average grade*/
+                function doCalcGpa ()
+                {
+                    var i = 0;
+                    var total = 0;
+                 
+                do {
+                         total = total + grades[i];
+                          i++;
+                    }
+                 
+                while (i < grades.length); 
+                
+                return (total / grades.length); }
+    
+                /* Write out your average*/ 
+                document.write("<h3>Your average is " + doCalcGpa() + "% this semester.</h3>")           
+    
+        </script>
+
+<p>This tool is for estimating purposes only. See your individual teachers and guidance counselors to develop an action plan if needed.</p> 
+
+</body>
+
+</html>

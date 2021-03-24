@@ -1,0 +1,78 @@
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
+    font-size: 3.5em;
+    color: black;
+}
+
+h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.25em;
+    color:black;
+    text-shadow: ##e6e4d4 2px 2px;
+
+}
+
+h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.25em;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 1%;
+
+}
+
+body{
+    background-image: url("../images/flowers2.jpg"); /* image from unsplash */
+    background-size: 100%;
+    max-height: 80%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: #e8e6e9;
+    text-align: center;
+  }
+  
+  div {
+    margin: 15%;
+    background-color: #FBFAF5;
+    padding: 1em;
+  }
+  /* Style the input fields */
+input {
+    padding: 10px;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    border: 1px solid #aaaaaa;
+      }
+
+
+button {
+  background-color: #085808;
+  padding: 10px;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    border: 1px solid #aaaaaa;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
