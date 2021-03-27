@@ -1,7 +1,7 @@
 <html>
 <head>
-    <title>Week 9</title>
-    <link rel="stylesheet" href="css/style_wk9.css"> <!-- linking to the CSS for this page/form-->
+    <title>Week 10</title>
+    <link rel="stylesheet" href="css/style_wk10.css"> <!-- linking to the CSS for this page/form-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="text/javascript">
@@ -221,8 +221,8 @@
         ];
 
 
-        /*Function to find the position of the state in the first array*/
-        function findState(name, stateArray)
+    /*Function to find the position of the state in the first array*/
+function findState(name, stateArray)
         {
             var len = stateArray.length;
             var position = 99;
@@ -235,7 +235,7 @@
         }
 
    /*Function to write results for the state name entered in the search bar*/     
-   function findusaStates(state)
+function findusaStates(state)
    {
     var pos = findState(state, USAstates);
     var flower = stateFlowers.slice(pos, pos+1); /*Finds the array value for the same position as the state */
@@ -249,17 +249,59 @@
    
     else { /*If a name on the list is entered, pulls the corresponding data and writes out a sentence with the information.*/
                    
-            writeText("The state flower of " + state + " is " + flower + ". The scientific name is: <i>" + scientific + "</i>. " + flower + " " + facts, "text");
+            writeText("The state flower of " + state + " is " + flower + ". The scientific name is: <i>" + scientific + "</i>. " + flower + " " + facts);
     
+        }
+
     }
 
-}
+function GetRandomRange(lower, upper) {   /* Inclusive range */
+        var length, aNumber;
 
+        length = (upper - lower) + 1;
+        aNumber = Math.floor(Math.random() * length) + lower;
+ 
+        return aNumber;
 
-    function writeText(txt, id)
-    {
-    document.getElementById(id).innerHTML=txt;
     }
+
+function randomStringFromArray(anArray) {  /* Selects a random state from the array */
+    
+    var aString, len;
+    
+    len = anArray.length;
+    random_index =  GetRandomRange(0, len-1);
+    aString = anArray[random_index];
+
+    return aString;
+  }
+
+function randomState()  /*  */
+  {
+    var str1 = "";
+    
+        str1 = randomStringFromArray(USAstates);
+
+    return str1;    
+
+  }
+
+    /*  Write random state to text box  */
+function writeTextRandomState()
+  {
+    var str1 = " ";
+    
+        str1 = randomState();
+   
+    writeText(str1);
+
+  }
+  
+function writeText(txt)
+   {
+        document.getElementById("desc").innerHTML=txt;
+   } 
+
 
     </script>
 
@@ -270,9 +312,11 @@
     <div>
     <h1>State Flower Facts</h1>
     <h2>Enter the state below to find out the state flower.</h2>
-    <input type="text" id="textForm" name="textForm" placeholder="Enter state name here" value=""><button type="button" onclick="findusaStates(document.getElementById('textForm').value)">Search</button>
+    <input type="text" id="textForm" name="textForm" placeholder="Enter state name here" value=""><button type="button" onclick="findusaStates(document.getElementById('textForm').value)">Search</button> 
         <br>
-    <p id="text"></p>
+    <p>Not sure which state to look up? Click the button for a suggestion.</p><button type="button" onclick="writeTextRandomState()">Surprise Me</button>
+    <br>
+    <p id="desc"></p>
     </div>
 
 

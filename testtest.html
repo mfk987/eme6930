@@ -222,7 +222,7 @@
 
 
         /*Function to find the position of the state in the first array*/
-        function findState(name, stateArray)
+    function findState(name, stateArray)
         {
             var len = stateArray.length;
             var position = 99;
@@ -235,7 +235,7 @@
         }
 
    /*Function to write results for the state name entered in the search bar*/     
-   function findusaStates(state)
+function findusaStates(state)
    {
     var pos = findState(state, USAstates);
     var flower = stateFlowers.slice(pos, pos+1); /*Finds the array value for the same position as the state */
@@ -249,17 +249,59 @@
    
     else { /*If a name on the list is entered, pulls the corresponding data and writes out a sentence with the information.*/
                    
-            writeText("The state flower of " + state + " is " + flower + ". The scientific name is: <i>" + scientific + "</i>. " + flower + " " + facts, "text");
+            writeText(pos + "The state flower of " + state + " is " + flower + ". The scientific name is: <i>" + scientific + "</i>. " + flower + " " + facts, "text");
     
     }
 
 }
 
+function randomState()
+  {
+    var str1 = " ";
+    
+    str1 = randomStringFromArray(USAstates);
 
-    function writeText(txt, id)
-    {
-    document.getElementById(id).innerHTML=txt;
-    }
+    return str1;    
+
+  }
+
+
+    /*
+   * Write random praise to text box
+   */
+   function writeTextRandomState()
+  {
+    var str1 = " ";
+    
+    str1 = randomState();
+    writeText(str1);
+  }
+
+  function writeText(txt)
+   {
+   document.getElementById("desc").innerHTML=txt;
+   } 
+
+
+/* function getRndInteger(min, max) {  // from https://www.w3schools.com/js/tryit.asp?filename=tryjs_random_function2
+
+
+    var rndInt = Math.floor(Math.random() * (max - min + 1) ) + min;
+
+    return rndInt;}
+
+    
+
+function randomFlower(rndInt) {
+
+    var random = USAstates.slice(rndInt, rndInt+1);
+    var ran_flower = stateFlowers.slice(rndInt, rndInt+1); 
+    var ran_scientific = sciName.slice(rndInt, rndInt+1); 
+    var ran_facts = flowerFacts.slice(rndInt, rndInt+1); 
+
+    writeText("The state flower of " + random + " is " + ran_flower + ". The scientific name is: <i>" + ran_scientific + "</i>. " + ran_flower + " " + ran-facts, "random");
+}*/
+
 
     </script>
 
@@ -270,9 +312,19 @@
     <div>
     <h1>State Flower Facts</h1>
     <h2>Enter the state below to find out the state flower.</h2>
-    <input type="text" id="textForm" name="textForm" placeholder="Enter state name here" value=""><button type="button" onclick="findusaStates(document.getElementById('textForm').value)">Search</button>
+    <input type="text" id="textForm" name="textForm" placeholder="Enter state name here" value=""><button type="button" onclick="findusaStates(document.getElementById('textForm').value)">Search</button> 
+
+
+    <button onclick="document.getElementById('demo').innerHTML = getRndInteger()">Click Me</button>
+
+    <input type="button" onclick="writeTextRandomState()" value="get random praise" />
+
+    <button onclick="randomFlower(getRndInteger(0,51))">Random</button>
+    
+
         <br>
-    <p id="text"></p>
+    <p id="text"></p><p id="random"></p><p id="demo"></p>
+    <p id="desc">Here is where sentences will appear.</p>
     </div>
 
 
