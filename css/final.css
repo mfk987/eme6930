@@ -1,0 +1,94 @@
+
+@viewport {
+    width: device-width;
+    zoom: 1;
+  }
+
+
+h1 {
+    font-size: 5em;
+}
+h2 {
+    text-align: center;
+    color: white;
+    text-shadow: gray;
+}
+
+.icon {
+    max-height: 6em;
+    padding: .15em;
+    padding-top: 1.5em;
+}
+
+.standards {
+    background-color: teal;
+    min-height: 20%;
+    align-content: center;
+}
+
+/* Responsive Layouts */
+
+/*Responsive Grid-View from https://www.w3schools.com/css/css_rwd_grid.asp*/
+* { box-sizing: border-box; }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
+
+/*Padding so that the menus do not obscure any of the page content*/
+
+.content {
+    padding: 1.5em;
+}
+
+/* For portrait view mobile phones: */
+[class*="col-"] { width: 100%;}
+  
+  @media only screen and (min-width: 641px) {
+    /* For tablets or landscape view mobile phones: */
+    .col-s-1 {width: 6.66%;}
+    .col-s-2 {width: 13.33%;}
+    .col-s-3 {width: 20%;}
+    .col-s-4 {width: 26.66%;}
+    .col-s-5 {width: 33.33%;}
+    .col-s-6 {width: 40%;}
+    .col-s-7 {width: 46.66%;}
+    .col-s-8 {width: 53.33%;}
+    .col-s-9 {width: 60%;}
+    .col-s-10 {width: 66.66%;}
+    .col-s-11 {width: 73.33%;}
+    .col-s-12 {width: 80%;}
+    .col-s-13 {width: 86.66%;}
+    .col-s-14 {width: 93.33%;}
+    .col-s-15 {width: 100%;}
+
+    .callout {
+        display: contents;
+    }
+
+
+  @media only screen and (min-width: 1080px) {
+    /* For desktop: */
+    .col-1 {width: 6.66%;}
+    .col-2 {width: 13.33%;}
+    .col-3 {width: 20%;}
+    .col-4 {width: 26.66%;}
+    .col-5 {width: 33.33%;}
+    .col-6 {width: 40%;}
+    .col-7 {width: 46.66%;}
+    .col-8 {width: 53.33%;}
+    .col-9 {width: 60%;}
+    .col-10 {width: 66.66%;}
+    .col-11 {width: 73.33%;}
+    .col-12 {width: 80%;}
+    .col-13 {width: 86.66%;}
+    .col-14 {width: 93.33%;}
+    .col-15 {width: 100%;}
