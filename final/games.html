@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FINAL</title>
+        <link rel="stylesheet" href="css/final1.css"> <!-- Link to CSS Stylesheet -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- For responsive webapge styling -->
+        <meta charset="utf-8">
+
+        <script type="text/javascript">
+            /*JS for the side nav */
+                /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                }
+
+                /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                }      
+        </script>
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="games.html">Board Games</a>
+            <a href="theme.html">Games by Theme</a>
+            <a href="mechanism.html">Games by Mechanism</a>
+            <a href="quiz.html">Take the Quiz</a>
+            <a href="feedback.html">Feedback</a>
+          </div>
+          
+          <!-- Use any element to open the sidenav -->
+          <span onclick="openNav()"><img src="images/final/menu.png" style="height: 30px;"></span>
+          
+          <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+          <div id="main">
+            
+            <div class="content">
+            <h1><img src="images/final/box.png" style="height: 100px; float: inline-start;"> Games.</h1>
+
+            <div class="row"> <!-- Row #1--> 
+                <div class="col-3 col-s-6" style="text-align: center;">
+                    <img src="images/games/7wonders.jpg" style="height: 200px;"><br>
+                     <button class="library" onclick="Wndrs()">7 Wonders</button>
+                    <p id="Wonders"></p>
+                    <script>
+                        function Wndrs() {
+                            var plyrs = "Number of Players: 2-7";
+                            var ideal = "Best Player Count: 4-5";
+                            var length = "Play Time: 45 - 90 minutes";
+                            var description = "Description: Draft cards to develop your ancient civilization and build its Wonder of the World.";
+                            var link = "https://youtu.be/z_Wfdn5Es8U";
+                            document.getElementById("Wonders").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                    </script>
+                </div>
+                <div class="col-3 col-s-6" style="text-align: center;">
+                    <img src="images/games/azul.jpg" style="height: 200px;"><br>
+                     <button class="library" onclick="Azul()">Azul</button>
+                    <p id="zul"></p>
+                    <script>
+                        function Azul() {
+                            var plyrs = "Number of Players: 2-4";
+                            var ideal = "Best Player Count: 2";
+                            var length = "Play Time: 30 minutes";
+                            var description = "Description: Artfully embellish the walls of your palace by drafting the most beautiful tiles.";
+                            var link = "COMING SOON";
+                            document.getElementById("zul").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                    </script>
+                </div>
+                <div class="col-3 col-s-6" style="text-align: center;">
+                    <img src="images/games/codenames.jpg" style="height: 200px;"><br>
+                     <button class="library" onclick="Cdnms()">Codenames</button>
+                    <p id="code"></p>
+                    <script>
+                        function Cdnms() {
+                            var plyrs = "Number of Players: 4-8";
+                            var ideal = "Best Player Count: 6, 8";
+                            var length = "Play Time: 15 minutes";
+                            var description = "Description: Give your team clever one-word clues to help them spot their agents in the field.";
+                            var link = "https://youtu.be/J8RWBooJivg";
+                            document.getElementById("code").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                    </script>
+                </div>
+                <div class="col-3 col-s-6" style="text-align: center;">
+                    <img src="images/games/villainous.jpg" style="height: 200px;"><br>
+                     <button class="library" onclick="Disney()">Disney Villainous</button>
+                    <p id="vil"></p>
+                    <script>
+                        function Disney() {
+                            var plyrs = "Number of Players: 2-6";
+                            var ideal = "Best Player Count: 3";
+                            var length = "Play Time: 55 minutes";
+                            var description = "Description: The villains assemble to face off, race to their goal, and rule the Disney realms.";
+                            var link = "https://youtu.be/8wdvXKRfoPI";
+                            document.getElementById("vil").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                    </script>
+                </div>
+
+                <div class="row"> <!-- Row #2--> 
+                    <div class="col-3 col-s-6" style="text-align: center;">
+                        <img src="images/games/everdell.png" style="height: 200px;"><br>
+                         <button class="library" onclick="ever()">Everdell</button>
+                        <p id="dell"></p>
+                        <script>
+                            function ever() {
+                                var plyrs = "Number of Players: 1-4";
+                                var ideal = "Best Player Count: 3";
+                                var length = "Play Time: 90 minutes";
+                                var description = "Description: Use resources to build a village of critters and constructions in this woodland game.";
+                                var link = "https://youtu.be/1b9zQz7COxs";
+                                document.getElementById("dell").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                        </script>
+                    </div>
+                    <div class="col-3 col-s-6" style="text-align: center;">
+                        <img src="images/games/horrified.jpg" style="height: 200px;"><br>
+                         <button class="library" onclick="hor()">Horrified</button>
+                        <p id="fied"></p>
+                        <script>
+                            function hor() {
+                                var plyrs = "Number of Players: 1-5";
+                                var ideal = "Best Player Count: 3";
+                                var length = "Play Time: 60 minutes";
+                                var description = "Description: Classic movie monsters terrorize a town! Can your team stop them in time?";
+                                var link = "https://youtu.be/p4fB42w15Tw";
+                                document.getElementById("fied").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                        </script>
+                    </div>
+                    <div class="col-3 col-s-6" style="text-align: center;">
+                        <img src="images/games/hues.jpg" style="height: 200px;"><br>
+                         <button class="library" onclick="hues()">Hues & Cues</button>
+                        <p id="cues"></p>
+                        <script>
+                            function hues() {
+                                var plyrs = "Number of Players: 3-10";
+                                var ideal = "Best Player Count: 5-9";
+                                var length = "Play Time: 30 minutes";
+                                var description = "Description: How well can you describe a color hue without using a primary color's name?!";
+                                var link = "https://youtu.be/oZSveXpjbak";
+                                document.getElementById("cues").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                        </script>
+                    </div>
+                    <div class="col-3 col-s-6" style="text-align: center;">
+                        <img src="images/games/justone.jpg" style="height: 200px;"><br>
+                         <button class="library" onclick="just()">Just One</button>
+                        <p id="one"></p>
+                        <script>
+                            function just() {
+                                var plyrs = "Number of Players: 4-7";
+                                var ideal = "Best Player Count: 6, 7";
+                                var length = "Play Time: 20 minutes";
+                                var description = "Description: TGive one-word clues so someone can guess one word, but duplicate clues are discarded.";
+                                var link = "COMING SOON";
+                                document.getElementById("one").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                        </script>
+                    </div>
+
+                    <div class="row"> <!-- Row #3--> 
+                        <div class="col-3 col-s-6" style="text-align: center;">
+                            <img src="images/games/kingdomino.png" style="height: 200px;"><br>
+                             <button class="library" onclick="king()">Kingdomino</button>
+                            <p id="dom"></p>
+                            <script>
+                                function king() {
+                                    var plyrs = "Number of Players: 2-4";
+                                    var ideal = "Best Player Count: 2, 4";
+                                    var length = "Play Time: 15 minutes";
+                                    var description = "Description: Build a kingdom with varied terrains on domino-shaped tiles in this fast family game.";
+                                    var link = "https://youtu.be/smbwBPmP4Ms";
+                                    document.getElementById("dom").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                            </script>
+                        </div>
+                        <div class="col-3 col-s-6" style="text-align: center;">
+                            <img src="images/games/nearfar.jpg" style="height: 200px;"><br>
+                             <button class="library" onclick="near()">Near & Far</button>
+                            <p id="far"></p>
+                            <script>
+                                function near() {
+                                    var plyrs = "Number of Players: 2-4";
+                                    var ideal = "Best Player Count: 3";
+                                    var length = "Play Time: 120 minutes";
+                                    var description = "Description: Explore the lands to discover the Last Ruins and become the most storied traveller.";
+                                    var link = "https://youtu.be/nFiNJ07cgnA";
+                                    document.getElementById("far").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                            </script>
+                        </div>
+                        <div class="col-3 col-s-6" style="text-align: center;">
+                            <img src="images/games/pandemic.jpg" style="height: 200px;"><br>
+                             <button class="library" onclick="Pand()">Pandemic</button>
+                            <p id="emic"></p>
+                            <script>
+                                function Pand() {
+                                    var plyrs = "Number of Players: 1-4";
+                                    var ideal = "Best Player Count: 4";
+                                    var length = "Play Time: 45 - 60 minutes";
+                                    var description = "Description: Your team of experts must prevent the world from succumbing to a viral pandemic.";
+                                    var link = "https://youtu.be/ojkScPkdgsk";
+                                    document.getElementById("emic").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                            </script>
+                        </div>
+                        <div class="col-3 col-s-6" style="text-align: center;">
+                            <img src="images/games/parks.jpg" style="height: 200px;"><br>
+                             <button class="library" onclick="parks()">PARKS</button>
+                            <p id="prks"></p>
+                            <script>
+                                function parks() {
+                                    var plyrs = "Number of Players: 1-5";
+                                    var ideal = "Best Player Count: 3";
+                                    var length = "Play Time: 45 minutes";
+                                    var description = "Description: Hike through National Parks tiles, collecting memories and admiring gorgeous scenery.";
+                                    var link = "COMING SOON";
+                                    document.getElementById("prks").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                            </script>
+                        </div>
+
+                        <div class="row"> <!-- Row #4--> 
+                            <div class="col-3 col-s-6" style="text-align: center;">
+                                <img src="images/games/santorini.png" style="height: 200px;"><br>
+                                 <button class="library" onclick="sant()">Santorini</button>
+                                <p id="orini"></p>
+                                <script>
+                                    function sant() {
+                                        var plyrs = "Number of Players: 2-3";
+                                        var ideal = "Best Player Count: 2";
+                                        var length = "Play Time: 20 minutes";
+                                        var description = "Description: Use different divine powers to build and climb the towers!";
+                                        var link = "COMING SOON";
+                                        document.getElementById("orini").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                                </script>
+                            </div>
+                            <div class="col-3 col-s-6" style="text-align: center;">
+                                <img src="images/games/sushi.jpg" style="height: 200px;"><br>
+                                 <button class="library" onclick="sushi()">Sushi Go Party!</button>
+                                <p id="go"></p>
+                                <script>
+                                    function sushi() {
+                                        var plyrs = "Number of Players: 2-8";
+                                        var ideal = "Best Player Count: 4-5";
+                                        var length = "Play Time: 20 minutes";
+                                        var description = "Description: Pass sushi around a bigger table and take the best dishes. Save room for dessert!";
+                                        var link = "COMING SOON";
+                                        document.getElementById("go").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                                </script>
+                            </div>
+                            <div class="col-3 col-s-6" style="text-align: center;">
+                                <img src="images/games/ttr.jpg" style="height: 200px;"><br>
+                                 <button class="library" onclick="ttr()">Ticket to Ride</button>
+                                <p id="ride"></p>
+                                <script>
+                                    function ttr() {
+                                        var plyrs = "Number of Players: 2-5";
+                                        var ideal = "Best Player Count: 4";
+                                        var length = "Play Time: 45 minutes";
+                                        var description = "Description: Build your railroad across North America to connect cities and complete tickets.";
+                                        var link = "https://youtu.be/4JhFhyvGdik";
+                                        document.getElementById("ride").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                                </script>
+                            </div>
+                            <div class="col-3 col-s-6" style="text-align: center;">
+                                <img src="images/games/wingspan.jpg" style="height: 200px;"><br>
+                                 <button class="library" onclick="wing()">Wingspan</button>
+                                <p id="span"></p>
+                                <script>
+                                    function wing() {
+                                        var plyrs = "Number of Players: 1-5";
+                                        var ideal = "Best Player Count: 3";
+                                        var length = "Play Time: 60 - 75 minutes";
+                                        var description = "Description: Attract a beautiful and diverse collection of birds to your wildlife reserve.";
+                                        var link = "https://youtu.be/lgDgcLI2B0U";
+                                        document.getElementById("span").innerHTML = description + "<br>" + plyrs +"<br>"+ ideal +"<br>"+ length +"<br> How to play video:" + link;}
+                                </script>
+                            </div>
+          
+    </div>
+            
+
+    
+        <br><br><br>
+    <h3 style="font-family: 'Grand Hotel', cursive; text-align: center;">Copywrite 2021 | Melissa Kemm</h3>
+
+</div>
+
+    </body>
+</html>

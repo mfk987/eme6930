@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FINAL</title>
+        <link rel="stylesheet" href="css/final1.css"> <!-- Link to CSS Stylesheet -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- For responsive webapge styling -->
+        <meta charset="utf-8">
+
+        <script type="text/javascript">
+
+                       
+            /*JS for the side nav */
+                /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                }
+
+                /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+                }
+
+                /* Write out the suggestion */
+                function writeText(txt, destination){ document.getElementById(destination).innerHTML=txt; }
+
+                //var slider = document.getElementById("myRange");
+                //var output = document.getElementById("demo");
+                //output.innerHTML = slider.value;
+                
+                //slider.oninput = function() {
+                //output.innerHTML = this.value;}
+
+
+                /* An array an var to keep track of orders entered */
+                var game = [];
+                var num_game = 0;
+
+                function form (players, time, size) {
+                    this.players = players;
+                    this.time = time;
+                    this.size = size; 
+
+                    this.suggestion = function() {
+                        var suggestion = "Based on your inputs, we recommend ";
+
+                        if (this.players == "single") {
+                            if (this.time == "hour") {
+                                if (this.size == "medium") 
+                                { suggestion = suggestion + "Horrified and PARKS."} 
+                                else if (this.size == "big") 
+                                { suggestion = suggestion + "Pandemic." }
+                                else {suggestion = "There are no small, single-player games we can reccomend at this time. Please check back later."}
+                            } 
+                            else if (this.time == "hourplus") {
+                                if (this.size == "big")
+                                {suggestion = suggestion + "Everdell and Wingspan."}
+                                else if (this.size == "medium") 
+                                { suggestion = suggestion + "playing one or two games of Horrified or PARKS."} 
+                                else {suggestion = "Try entering a shorter play-time for a suggestion."}
+                            }
+                            else {
+                                suggestion = "We are still working on this suggestion. Please check back later."
+                            }
+                        }
+                        else if (this.players == "duo") {
+                            if (this.time == "under30") {
+                                if (this.size == "small") {
+                                    suggestion = suggestion + "Santorini." }
+                                else if (this.size == "medium") {
+                                    suggestion = suggestion + "Azul and Kingdomino." }
+                                else {suggestion = "Try entering a smaller game size for a suggestion as it will still fit on your table!"}
+                            }
+                            else if (this.time == "hour") {
+                                if (this.size == "medium") {
+                                    suggestion = suggestion + " PARKS and Horrified."}
+                                else if (this.size == "big") {
+                                    suggestion = suggestion + "Everdell." }
+                                else {suggestion = "There are no small games to recommend based on the player count and time entered."}
+                            }
+                            else if (this.time == "hourplus") {
+                                if (this.size == "medium") {
+                                    suggestion = suggestion + "Pandemic."}
+                                else if (this.size == "big") {
+                                    suggestion = suggestion + "Wingspan and Near & Far." }
+                                else { suggestion = "There are no small, 60+ minute games we can suggest at this time."}
+                                }
+                            }
+                            else {suggestion = "We are still working on this suggestion. Please check back later!"}
+
+                    writeText(suggestion, "suggestion");
+                    }
+                }
+
+                function custom_game () { //allows for unqiue inputs based on drop-down menus on the page
+                
+                var suggestion;
+              
+                // this part pulls the selections from the online form into the arragement constructor
+                game[num_game] = new form (document.myForm.players.value, document.myForm.time.value, document.myForm.size.value);
+                game[num_game].suggestion(); //
+                ++num_game;
+            
+            }
+                    
+        </script>
+    </head>
+
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="games.html">Board Games</a>
+            <a href="theme.html">Games by Theme</a>
+            <a href="mechanism.html">Games by Mechanism</a>
+            <a href="quiz.html">Take the Quiz</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+          
+          <!-- Use any element to open the sidenav -->
+          <span onclick="openNav()"><img src="images/final/menu.png" style="height: 30px;"></span>
+          
+          <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+          <div id="main">
+            
+            <div class="content">
+            <h1><img src="images/final/strategy.png" style="height: 100px; float: inline-start;"> Quiz.</h1>
+
+            <form name="myForm"><!--Creating a form-->
+            <p>Not sure what game to play next? Select one answer from each question to receive a personalized suggestion. <i>Please note that as we play more games (!!) we will add to the suggestions.</i></p><br>
+            
+            <!--
+                <div class="slidecontainer"> // From https://www.w3schools.com/howto/howto_js_rangeslider.asp //
+                <p>1.) Drag the slider to select the number of players: <span id="demo"></span></p>
+                <input type="range" min="1" max="8" value="4" class="slider" id="myRange">
+            </div>
+
+            
+            <p>2.) How old is the youngest player? </p>
+                <select name = "age">
+                    <option value = "under9">9 and under</option>
+                    <option value="ten212">10 - 12</option>
+                    <option value="plus13">13 and older</option>
+                </select>
+                -->
+            
+            <p>1.) How many players?</p>
+                <select name="players">
+                    <option value="single">1</option>
+                    <option value="duo">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                    <option value="seven">7</option>
+                    <option value="eight">8 or more</option>
+                </select>
+            
+            <p>2.) How long do you have to play? </p>
+                <select name="time">
+                    <option value="under30">Less than 30 minutes</option>
+                    <option value="hour">30 to 60 minutes</option>
+                    <option value="hourplus">More than 60 minutes</option>
+                </select>
+
+            <p>3.) How big is your playing area? </p>
+                <select name="size">
+                    <option value="small">Small (just a few cards)</option>
+                    <option value="medium">Medium (can fit a game board)</option>
+                    <option value="big">Big (fit a game board with elbow room)</option>
+                </select>
+            <br><br><br>
+            <button type="button" onclick="custom_game()">Suggest a Board Game!</button> <!--submit--> <p id="suggestion"></p>
+            <br>
+            
+        
+            </form>
+            
+            <script>
+
+            </script>
+            
+            </div>
+        </div>
+    </body>
+
+</html>
