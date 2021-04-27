@@ -25,14 +25,6 @@
                 /* Write out the suggestion */
                 function writeText(txt, destination){ document.getElementById(destination).innerHTML=txt; }
 
-                //var slider = document.getElementById("myRange");
-                //var output = document.getElementById("demo");
-                //output.innerHTML = slider.value;
-                
-                //slider.oninput = function() {
-                //output.innerHTML = this.value;}
-
-
                 /* An array an var to keep track of orders entered */
                 var game = [];
                 var num_game = 0;
@@ -42,54 +34,127 @@
                     this.time = time;
                     this.size = size; 
 
-                    this.suggestion = function() {
+                    this.suggestion = function() { // the brains behind the recommendations from the quiz inputs
                         var suggestion = "Based on your inputs, we recommend: ";
                         
 
                         if (this.players == "single") {
                             if (this.time == "hour") {
-                                if (this.size == "medium") 
-                                { suggestion = suggestion +  "<br><img src='images/games/parks.jpg' style='height:250px;'>"} 
-                                else if (this.size == "big") 
-                                { suggestion = suggestion + "<br><img src='images/games/pandemic.jpg' style='height:250px;'>" }
+                                if (this.size == "medium") {suggestion = suggestion +  "<br><br><img src='images/games/parks.jpg' style='height:250px;'>"} // output is images of the box covers
+                                else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/pandemic.jpg' style='height:250px;'>" }
                                 else {suggestion = "There are no small, single-player games we can reccomend at this time. Please check back later."}
                             } 
                             else if (this.time == "hourplus") {
-                                if (this.size == "big")
-                                {suggestion = suggestion + "<br> <img src='images/games/wingspan.jpg' style='height:250px;'>"}
-                                else if (this.size == "medium") 
-                                { suggestion = suggestion + "playing one or two games of<br> <img src='images/games/parks.jpg' style='height:250px;'>"} 
+                                if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/wingspan.jpg' style='height:250px;'>"}
+                                else if (this.size == "medium") {suggestion = suggestion + "playing one or two games of<br><br> <img src='images/games/parks.jpg' style='height:250px;'>"} 
                                 else {suggestion = "Try entering a shorter play-time for a suggestion."}
                             }
                             else {
-                                suggestion = "We are still working on this suggestion. Please check back later."
-                            }
+                                suggestion = "We are still working on this suggestion. Please check back later." } // total number of games is limited, so this statement is included for inputs with no recommendation available
                         }
                         else if (this.players == "duo") {
                             if (this.time == "under30") {
-                                if (this.size == "small") {
-                                    suggestion = suggestion + "<br><img src='images/games/santorini.png' style='height:250px;'>" }
-                                else if (this.size == "medium") {
-                                    suggestion = suggestion + "<br><img src='images/games/kingdomino.png' style='height:250px;'>" }
+                                if (this.size == "small") {suggestion = suggestion + "<br><br><img src='images/games/santorini.png' style='height:250px;'>" }
+                                else if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/kingdomino.png' style='height:250px;'>" }
                                 else {suggestion = "Try entering a smaller game size for a suggestion as it will still fit on your table!"}
                             }
                             else if (this.time == "hour") {
-                                if (this.size == "medium") {
-                                    suggestion = suggestion + "<br><img src='images/games/horrified.jpg' style='height:250px;'>"}
-                                else if (this.size == "big") {
-                                    suggestion = suggestion + "<br><img src='images/games/everdell.png' style='height:250px;'>" }
+                                if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/horrified.jpg' style='height:250px;'>"}
+                                else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/ttr.jpg' style='height:250px;'>" }
                                 else {suggestion = "There are no small games to recommend based on the player count and time entered."}
                             }
                             else if (this.time == "hourplus") {
-                                if (this.size == "medium") {
-                                    suggestion = suggestion + "<br><img src='images/games/pandemic.jpg' style='height:250px;'>"}
-                                else if (this.size == "big") {
-                                    suggestion = suggestion + "<br><img src='images/games/wingspan.jpg' style='height:250px;'>" }
+                                if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/pandemic.jpg' style='height:250px;'>"}
+                                else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/wingspan.jpg' style='height:250px;'>" }
                                 else { suggestion = "There are no small games to recommend based on the player count and time entered."}
                                 }
-                            }
-                            else {suggestion = "We are still working on this suggestion. Please check back later!"}
+                            else {suggestion = "We are still working on this suggestion. Please check back later."}
+                        }
+                            
+                        else if (this.players == "three") {
+                            if (this.time == "under30") {
+                                if (this.size == "small") {suggestion = suggestion + "<br><br><img src='images/games/kingdomino.png' style='height:250px;'>"}
+                                    else if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/azul.jpg' style='height:250px;'>"}
+                                    else {suggestion = "Try a smaller game size for a suggestion as it will still fit on your table!"}
+                            } else if (this.time == "hour") {
+                                if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/villainous.jpg' style='height:250px;'>"}
+                                    else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/horrified.jpg' style='height:250px;'>"} 
+                                    else {suggestion = "There are no small games to recommend based on the player count and time."}
+                            } else if (this.time == "hourplus") {
+                                if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/everdell.png' style='height:250px;'>"}
+                                    else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/nearfar.jpg' style='height:250px;'>" }
+                                    else {suggestion = "There are no small games to recomend based on the player counr and time."}
+                            } else { suggestion = "We are still working on this suggestion. Please check back later." }
+                        }
 
+                        else if (this.players == "four") {
+                            if (this.time == "under30") {
+                                if (this.size == "small") {suggestion = suggestion + "<br><br><img src='images/games/kingdomino.png' style='height:250px;'>"}
+                                    else if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/azul.jpg' style='height:250px;'>"}
+                                    else {suggestion = "Try a smaller game size for a suggestion as it will still fit on your table!"}
+                            } else if (this.time == "hour") {
+                                if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/7wonders.jpg' style='height:250px;'>"}
+                                    else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/horrified.jpg' style='height:250px;'>"} 
+                                    else {suggestion = "There are no small games to recommend based on the player count and time."}
+                            } else if (this.time == "hourplus") {
+                                if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/ttr.jpg' style='height:250px;'>"}
+                                    else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/nearfar.jpg' style='height:250px;'>" }
+                                    else {suggestion = "There are no small games to recomend based on the player counr and time."}
+                            } else { suggestion = "We are still working on this suggestion. Please check back later." }
+                        }
+
+                        else if (this.players == "five") {
+                            if (this.time == "under30") {
+                                if (this.size == "small") {suggestion = suggestion + "<br><br><img src='images/games/sushi.png' style='height:250px;'>"}
+                                    else if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/hues.jpg' style='height:250px;'>"}
+                                    else {suggestion = "Try a smaller game size for a suggestion as it will still fit on your table!"}
+                            } else if (this.time == "hour") {
+                                if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/villainous.jpg' style='height:250px;'>"}
+                                    else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/7wonders.jpg' style='height:250px;'>"} 
+                                    else {suggestion = "There are no small games to recommend based on the player count and time."}
+                            } else if (this.time == "hourplus") {
+                                if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/villainous.png' style='height:250px;'>"}
+                                    else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/wingspan.jpg' style='height:250px;'>" }
+                                    else {suggestion = "There are no small games to recomend based on the player counr and time."}
+                            } else { suggestion = "We are still working on this suggestion. Please check back later." }
+                        }
+
+                        else if (this.players == "six") {
+                            if (this.time == "under30") {
+                                if (this.size == "small") {suggestion = suggestion + "<br><br><img src='images/games/codenames.jpg' style='height:250px;'>"}
+                                    else if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/sushi.jpg' style='height:250px;'>"}
+                                    else {suggestion = "Try a smaller game size for a suggestion as it will still fit on your table!"}
+                            } else if (this.time == "hour") {
+                                if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/villainous.jpg' style='height:250px;'>"}
+                                    else if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/7wonders.jpg' style='height:250px;'>"} 
+                                    else {suggestion = "There are no small games to recommend based on the player count and time."}
+                            } else { suggestion = "We are still working on this suggestion. Please check back later." }
+                        }
+
+                        else if (this.players == "seven") {
+                            if (this.time == "under30") {
+                                if (this.size == "small") {suggestion = suggestion + "<br><br><img src='images/games/justone.jpg' style='height:250px;'>"}
+                                    else if (this.size == "medium") {suggestion = suggestion + "<br><br><img src='images/games/hues.jpg' style='height:250px;'>"}
+                                    else {suggestion = "Try a smaller game size for a suggestion as it will still fit on your table!"}
+                            } else { suggestion = "We are still working on this suggestion. Please check back later." }
+                        }
+
+                        else if (this.players == "eight") {
+                            if (this.time == "under30") {
+                                if (this.size == "small") {suggestion = suggestion + "<br><br><img src='images/games/codenames.jpg' style='height:250px;'>"}
+                                else if (this.size = "medium") {suggestion = suggestion + "<br><br><img src='images/games/justone.jpg' style='height:250px;'>"}
+                                else {suggestion = "Try a smaller game size at it will still fit on your table!"}
+                            } else if (this.time == "hour") {
+                                if (this.size == "big") {suggestion = suggestion + "<br><br><img src='images/games/hues.jpg' style='height:250px;'>"}
+                                else {suggestion = "We recommend playing multiple games of <br><br><img src='images/games/codenames.jpg' style='height:250px;'>"}
+                            } else if (this.time == "hourplus") {
+                                if (this.size == "big") {suggestion = "We recommend play multiple games of <br><br><img src='images/games/hues.jpg' style='height:250px;'>"}
+                                else {suggestion = "We recommend play multiple games of <br><br><img src='images/games/justone.jpg' style='height:250px;'>"}
+                            }    
+                            else {suggestion = "We are still working on this suggestion. Please check back later!"}
+                        }
+                        else {suggestion = "We are still working on this suggestion. Please check back later!"}
+                    
                     writeText(suggestion, "suggestion");
                     }
                 }
@@ -99,11 +164,10 @@
                 var suggestion;
               
                 // this part pulls the selections from the online form into the arragement constructor
-                game[num_game] = new form (document.myForm.players.value, document.myForm.time.value, document.myForm.size.value);
+                game[num_game] = new form (document.myForm.players.value, document.myForm.time.value, document.myForm.size.value); //modified from week 7 assignment
                 game[num_game].suggestion(); //
                 ++num_game;
-            
-            }
+                }
                     
         </script>
     </head>
@@ -130,23 +194,8 @@
             <p>Not sure what game to play next? Select one answer from each question to receive a personalized suggestion. <i>Please note that as we play more games (!!) we will add to the suggestions.</i></p><br>
             <div class="row questions">
                 <div class="col-5 col-s-5">
-            <form name="myForm"><!--Creating a form-->
-                       
-            <!--
-                <div class="slidecontainer"> // From https://www.w3schools.com/howto/howto_js_rangeslider.asp //
-                <p>1.) Drag the slider to select the number of players: <span id="demo"></span></p>
-                <input type="range" min="1" max="8" value="4" class="slider" id="myRange">
-            </div>
-
-            
-            <p>2.) How old is the youngest player? </p>
-                <select name = "age">
-                    <option value = "under9">9 and under</option>
-                    <option value="ten212">10 - 12</option>
-                    <option value="plus13">13 and older</option>
-                </select>
-                -->
-            
+            <form name="myForm"><!-- Creating a form for the quiz inputs -->
+                                 
             <p>1.) How many players?</p>
                 <select name="players">
                     <option value="single">1</option>
@@ -168,29 +217,21 @@
 
             <p>3.) How big is your playing area? </p>
                 <select name="size">
-                    <option value="small">Small (just a few cards)</option>
-                    <option value="medium">Medium (can fit a game board)</option>
+                    <option value="small">Small (room for just a few cards)</option>
+                    <option value="medium">Medium (room for game components or board)</option>
                     <option value="big">Big (fit a game board with elbow room)</option>
                 </select>
-            <br><br>
-            <button type="button" onclick="custom_game()">Suggest a Board Game!</button> <!--submit--> 
-        </div>
-
-        <div class="col-7 col-s-7">
-            <br>
-            <p id="suggestion"><i>Your recommendation will appear here!</p>
-            <br>
-        </div>
-    
-
-            
-        
             </form>
-            
-            <script>
+            <br><br>
+            <button type="button" onclick="custom_game()">Suggest a Board Game!</button> <!--submit button to run the recommendation function --> 
+        </div>
 
-            </script>
-            
+            <div class="col-7 col-s-7">
+                <br>
+                <p id="suggestion"><i>Your recommendation will appear here!</p> <!-- the recommendation appears here! -->
+                <br>
+            </div>      
+           
             </div>
         </div>
     </body>
