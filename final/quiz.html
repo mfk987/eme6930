@@ -43,21 +43,22 @@
                     this.size = size; 
 
                     this.suggestion = function() {
-                        var suggestion = "Based on your inputs, we recommend ";
+                        var suggestion = "Based on your inputs, we recommend: ";
+                        
 
                         if (this.players == "single") {
                             if (this.time == "hour") {
                                 if (this.size == "medium") 
-                                { suggestion = suggestion + "Horrified and PARKS."} 
+                                { suggestion = suggestion +  "<br><img src='images/games/parks.jpg' style='height:250px;'>"} 
                                 else if (this.size == "big") 
-                                { suggestion = suggestion + "Pandemic." }
+                                { suggestion = suggestion + "<br><img src='images/games/pandemic.jpg' style='height:250px;'>" }
                                 else {suggestion = "There are no small, single-player games we can reccomend at this time. Please check back later."}
                             } 
                             else if (this.time == "hourplus") {
                                 if (this.size == "big")
-                                {suggestion = suggestion + "Everdell and Wingspan."}
+                                {suggestion = suggestion + "<br> <img src='images/games/wingspan.jpg' style='height:250px;'>"}
                                 else if (this.size == "medium") 
-                                { suggestion = suggestion + "playing one or two games of Horrified or PARKS."} 
+                                { suggestion = suggestion + "playing one or two games of<br> <img src='images/games/parks.jpg' style='height:250px;'>"} 
                                 else {suggestion = "Try entering a shorter play-time for a suggestion."}
                             }
                             else {
@@ -67,24 +68,24 @@
                         else if (this.players == "duo") {
                             if (this.time == "under30") {
                                 if (this.size == "small") {
-                                    suggestion = suggestion + "Santorini." }
+                                    suggestion = suggestion + "<br><img src='images/games/santorini.png' style='height:250px;'>" }
                                 else if (this.size == "medium") {
-                                    suggestion = suggestion + "Azul and Kingdomino." }
+                                    suggestion = suggestion + "<br><img src='images/games/kingdomino.png' style='height:250px;'>" }
                                 else {suggestion = "Try entering a smaller game size for a suggestion as it will still fit on your table!"}
                             }
                             else if (this.time == "hour") {
                                 if (this.size == "medium") {
-                                    suggestion = suggestion + " PARKS and Horrified."}
+                                    suggestion = suggestion + "<br><img src='images/games/horrified.jpg' style='height:250px;'>"}
                                 else if (this.size == "big") {
-                                    suggestion = suggestion + "Everdell." }
+                                    suggestion = suggestion + "<br><img src='images/games/everdell.png' style='height:250px;'>" }
                                 else {suggestion = "There are no small games to recommend based on the player count and time entered."}
                             }
                             else if (this.time == "hourplus") {
                                 if (this.size == "medium") {
-                                    suggestion = suggestion + "Pandemic."}
+                                    suggestion = suggestion + "<br><img src='images/games/pandemic.jpg' style='height:250px;'>"}
                                 else if (this.size == "big") {
-                                    suggestion = suggestion + "Wingspan and Near & Far." }
-                                else { suggestion = "There are no small, 60+ minute games we can suggest at this time."}
+                                    suggestion = suggestion + "<br><img src='images/games/wingspan.jpg' style='height:250px;'>" }
+                                else { suggestion = "There are no small games to recommend based on the player count and time entered."}
                                 }
                             }
                             else {suggestion = "We are still working on this suggestion. Please check back later!"}
@@ -126,10 +127,11 @@
             
             <div class="content">
             <h1><img src="images/final/strategy.png" style="height: 100px; float: inline-start;"> Quiz.</h1>
-
-            <form name="myForm"><!--Creating a form-->
             <p>Not sure what game to play next? Select one answer from each question to receive a personalized suggestion. <i>Please note that as we play more games (!!) we will add to the suggestions.</i></p><br>
-            
+            <div class="row questions">
+                <div class="col-5 col-s-5">
+            <form name="myForm"><!--Creating a form-->
+                       
             <!--
                 <div class="slidecontainer"> // From https://www.w3schools.com/howto/howto_js_rangeslider.asp //
                 <p>1.) Drag the slider to select the number of players: <span id="demo"></span></p>
@@ -170,9 +172,17 @@
                     <option value="medium">Medium (can fit a game board)</option>
                     <option value="big">Big (fit a game board with elbow room)</option>
                 </select>
-            <br><br><br>
-            <button type="button" onclick="custom_game()">Suggest a Board Game!</button> <!--submit--> <p id="suggestion"></p>
+            <br><br>
+            <button type="button" onclick="custom_game()">Suggest a Board Game!</button> <!--submit--> 
+        </div>
+
+        <div class="col-7 col-s-7">
             <br>
+            <p id="suggestion"><i>Your recommendation will appear here!</p>
+            <br>
+        </div>
+    
+
             
         
             </form>
