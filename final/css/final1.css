@@ -18,12 +18,8 @@ h2 {font-family: 'Candal', sans-serif; }
 
 h3 {font-family: 'Grand Hotel', cursive; }
 
-p, label, button {font-family: 'Open Sans', sans-serif;}
+p, label, button, a {font-family: 'Open Sans', sans-serif;}
 
-a {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-  }
 
 html { background-color: #fcf3e7;}
 
